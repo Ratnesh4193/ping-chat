@@ -1,0 +1,24 @@
+{
+	"name": "whatsapp-clone",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node index.js",
+		"client": "cd whatsapp-clone-frontend && npm start",
+		"dev": "concurrently -n 'server,client' -c 'red,green' \"nodemon index.js\" \"npm run client\" "
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"cors": "^2.8.5",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"express-async-handler": "^1.2.0",
+		"mongoose": "^6.1.0",
+		"pusher": "^5.0.0"
+	}
+}
