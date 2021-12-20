@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
-import Pusher from 'Pusher'
+import mongoose from "mongoose";
+import Pusher from "Pusher";
 
 const db = mongoose.connection;
 
@@ -18,11 +18,13 @@ db.once("open", () => {
 	changeStream.on("change", (change) => {
 		if (change.operationType === "insert") {
 			const messageDetails = change.fullDocument;
-			console.log(messageDetails)
+			console.log(messageDetails);
 			pusher.trigger("messages", "inserted", {
+				_id: messageDetails._id,
 				name: messageDetails.name,
 				msg: messageDetails.msg,
-				sentBy: messageDetails.sentBy,
+				sender: messageDetails.sender,
+				receiver: messageDetails.receiver,
 				timestamp: messageDetails.timestamp,
 			});
 		}
