@@ -4,9 +4,9 @@ import Pusher from "Pusher";
 const db = mongoose.connection;
 
 const pusher = new Pusher({
-	appId: "1312491",
-	key: "a772e071e6b3c70ffff1",
-	secret: "3d18cc9d21e5dd53e1d7",
+	appId: "1320424",
+	key: "4c36d59173e80a8a0541",
+	secret: "745116ce97a18be6eec6",
 	cluster: "ap2",
 	useTLS: true,
 });
@@ -18,7 +18,6 @@ db.once("open", () => {
 	changeStream.on("change", (change) => {
 		if (change.operationType === "insert") {
 			const messageDetails = change.fullDocument;
-			console.log(messageDetails);
 			pusher.trigger("messages", "inserted", {
 				_id: messageDetails._id,
 				name: messageDetails.name,
