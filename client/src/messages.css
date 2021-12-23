@@ -1,0 +1,30 @@
+.message_title {
+	/* position:absolute; */
+	font-weight: 600;
+	font-size: xx-small;
+	padding: 2px;
+}
+.message_body {
+	position: relative;
+	font-size: 16px;
+	padding: 7px;
+	width: fit-content;
+	border-radius: 10px;
+	background-color: white;
+	margin-bottom: 10px;
+}
+.message_time {
+	flex: 1;
+	text-align: right;
+	margin: 5px;
+	font-size: xx-small;
+}
+
+.message_sent {
+	background-color: rgba(113, 187, 113, 0.74);
+	float: right;
+}
+.align_time_right{
+	justify-content: flex-end;
+}
+

@@ -1,0 +1,17 @@
+.contactAvatar {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	margin-top: 5px;
+}
+.contactAvatar_left {
+	padding: 15px;
+}
+.contactAvatar_right {
+	justify-content: space-between;
+	width: 100%;
+	padding: 10px;
+}
+.contactAvatar:hover {
+	background-color: rgba(228, 225, 225, 0.541);
+}

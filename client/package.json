@@ -1,0 +1,54 @@
+{
+	"name": "whatsapp-clone-frontend",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@emotion/react": "^11.7.0",
+		"@emotion/styled": "^11.6.0",
+		"@material-ui/icons": "^4.11.2",
+		"@mui/icons-material": "^5.2.1",
+		"@mui/material": "^5.2.2",
+		"@testing-library/jest-dom": "^5.16.1",
+		"@testing-library/react": "^11.2.7",
+		"@testing-library/user-event": "^12.8.3",
+		"axios": "^0.24.0",
+		"cookie-parser": "^1.4.6",
+		"express-async-handler": "^1.2.0",
+		"express-session": "^1.17.2",
+		"google-auth-library": "^7.10.4",
+		"i": "^0.3.7",
+		"npm": "^8.3.0",
+		"pusher-js": "^7.0.3",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-google-login": "^5.2.2",
+		"react-input-emoji": "^4.0.9",
+		"react-router-dom": "^6.2.1",
+		"react-scripts": "4.0.3",
+		"web-vitals": "^1.1.2"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}
