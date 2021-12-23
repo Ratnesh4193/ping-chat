@@ -1,18 +1,13 @@
 import express from "express";
 const app = express();
 
-import bodyParser from "body-parser";
 import dotenv from "dotenv";
-import asyncHandler from "express-async-handler";
 import cors from "cors";
-import User from "./modals/userSchema.js";
 import msgRoutes from "./routes/msgRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import "./db/conn.js";
 import "./utils/pusherConfig.js";
 
-const jsonParser = bodyParser.json();
-app.use(jsonParser);
 dotenv.config(); //for accessing env variables
 app.use(cors());
 

@@ -16,6 +16,7 @@ db.once("open", () => {
 	const changeStream = msgCollection.watch();
 
 	changeStream.on("change", (change) => {
+		// console.log(change)
 		if (change.operationType === "insert") {
 			const messageDetails = change.fullDocument;
 			pusher.trigger("messages", "inserted", {
@@ -24,8 +25,9 @@ db.once("open", () => {
 				msg: messageDetails.msg,
 				sender: messageDetails.sender,
 				receiver: messageDetails.receiver,
-				timestamp: messageDetails.timestamp,
+				timestamp: messageDetails.timestamp
 			});
+			// console.log(messageDetails);
 		}
 	});
 });
