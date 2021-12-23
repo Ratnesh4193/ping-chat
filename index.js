@@ -15,10 +15,6 @@ app.use(express.json());
 app.use(msgRoutes);
 app.use(userRoutes);
 
-app.get("/", (req, res) => {
-	res.status(200).send("Hello World");
-});
-
 const PORT = process.env.PORT || 8000;
 
 if (process.env.NODE_ENV == "production") {
