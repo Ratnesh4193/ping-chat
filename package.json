@@ -7,10 +7,9 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "node index.js",
-		"client": "cd whatsapp-clone-frontend && npm start",
+		"client": "cd client && npm start",
 		"dev": "concurrently -n 'server,client' -c 'red,green' \"nodemon index.js\" \"npm run client\" ",
 		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
-		
 	},
 	"author": "",
 	"license": "ISC",
