@@ -14,6 +14,7 @@ const App = () => {
 	// GoogleLogin
 
 	const responseGoogle = (res) => {
+		console.log(res);
 		async function fetchUser() {
 			try {
 				const response = await axios.post("/signin", res, {
