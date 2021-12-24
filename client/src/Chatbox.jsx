@@ -8,7 +8,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import AttachFileIcon from "@mui/icons-material/AttachFile";
 import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
 import LogoutIcon from "@mui/icons-material/Logout";
-import axios from "./axios";
+import axios from "axios";
 import { useParams } from "react-router-dom";
 import Pusher from "pusher-js";
 

@@ -4,7 +4,7 @@ import "./App.css";
 import Sidebar from "./Sidebar";
 import Chatbox from "./Chatbox";
 import Chatbox1 from "./Chatbox1";
-import axios from "./axios";
+import axios from "axios";
 import GoogleLogin from "react-google-login";
 
 const App = () => {
