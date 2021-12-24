@@ -16,7 +16,6 @@ import "./db/conn.js";
 import "./utils/pusherConfig.js";
 
 dotenv.config(); //for accessing env variables
-app.use(cors());
 
 app.use(express.json());
 app.use(msgRoutes);
