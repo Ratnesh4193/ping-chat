@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Pusher from "Pusher";
+import Pusher from "pusher";
 
 const db = mongoose.connection;
 
@@ -25,7 +25,7 @@ db.once("open", () => {
 				msg: messageDetails.msg,
 				sender: messageDetails.sender,
 				receiver: messageDetails.receiver,
-				timestamp: messageDetails.timestamp
+				timestamp: messageDetails.timestamp,
 			});
 			// console.log(messageDetails);
 		}
