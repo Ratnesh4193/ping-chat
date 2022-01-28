@@ -23,6 +23,8 @@
 .login-body {
 	height: 30vh;
 	width: 30vw;
+	min-width: 180px;
+	min-height: 100px;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;

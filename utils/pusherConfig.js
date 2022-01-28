@@ -26,6 +26,7 @@ db.once("open", () => {
 				sender: messageDetails.sender,
 				receiver: messageDetails.receiver,
 				timestamp: messageDetails.timestamp,
+				roomId: messageDetails.roomId,
 			});
 			// console.log(messageDetails);
 		}

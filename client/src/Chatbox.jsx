@@ -10,7 +10,7 @@ import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
 import LogoutIcon from "@mui/icons-material/Logout";
 import SendIcon from "@mui/icons-material/Send";
 
-import axios from "axios";
+import axios from "./axios.js";
 import { useParams } from "react-router-dom";
 import Pusher from "pusher-js";
 
@@ -119,6 +119,8 @@ const Chatbox = ({ user }) => {
 				}
 			);
 			data.msg = decrypt_msg.data.msg;
+			console.log(data, curRoom);
+
 			if (data.roomId === curRoom._id) setMessages([...messages, data]);
 		});
 
@@ -174,6 +176,11 @@ const Chatbox = ({ user }) => {
 					onEnter={sendMsg}
 					placeholder='Type message here...'
 				/>
+				{curMsg && (
+					<IconButton>
+						<SendIcon onClick={sendMsg} />
+					</IconButton>
+				)}
 				<IconButton>
 					<KeyboardVoiceIcon />
 				</IconButton>

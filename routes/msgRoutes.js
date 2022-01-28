@@ -17,35 +17,43 @@ router.post(
 		// saving msg to a common database
 		const encrypted = encrypter.encrypt(msg);
 		// console.log(msg, sender, receiver, name);
-		const newMsg = new Msg({
-			sender,
-			receiver,
-			msg: encrypted,
-			name,
-		});
-		const savedMsg = await newMsg.save();
-		// // adding msg id to the cur room
-
 		const participants = [sender, receiver];
 		participants.sort();
 		const curRoom = await Room.findOne({ participants });
 		if (curRoom) {
+			const newMsg = new Msg({
+				sender,
+				receiver,
+				msg: encrypted,
+				name,
+				roomId: curRoom._id,
+			});
+			const savedMsg = await newMsg.save();
+
 			curRoom.messages.push(savedMsg);
 			const updatedRoom = await curRoom.save();
-
-			savedMsg.roomId = curRoom._id;
-			const updatedMsg = await savedMsg.save();
 			res.status(201).send(updatedRoom);
 		} else {
 			console.log("Creating new Room");
 			const participants = [sender, receiver];
 			participants.sort();
+
 			const newRoom = new Room({
 				participants,
-				messages: [savedMsg],
+				messages: [],
 			});
-			console.log(newRoom);
 			const savedRoom = await newRoom.save();
+
+			const newMsg = new Msg({
+				sender,
+				receiver,
+				msg: encrypted,
+				name,
+				roomId: savedRoom._id,
+			});
+			const savedMsg = await newMsg.save();
+			savedRoom.messages = [savedMsg];
+			await savedRoom.save();
 			res.status(201).json({ savedRoom });
 		}
 		// res.send("hello World");

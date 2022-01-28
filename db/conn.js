@@ -7,7 +7,6 @@ const DB_PASSWORD = process.env.DB_PASSWORD;
 const DB_NAME = process.env.DB_NAME;
 
 const DB = `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@cluster0.v2loj.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`;
-
 mongoose
 	.connect(DB, {
 		useNewUrlParser: true,

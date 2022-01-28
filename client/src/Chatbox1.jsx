@@ -2,10 +2,8 @@ import React from "react";
 import "./Chatbox.css";
 import { IconButton } from "@mui/material";
 import ContactAvatar from "./ContactAvatar";
-import InputEmoji from "react-input-emoji";
 import SearchIcon from "@mui/icons-material/Search";
 import AttachFileIcon from "@mui/icons-material/AttachFile";
-import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
 import LogoutIcon from "@mui/icons-material/Logout";
 
 const Chatbox1 = ({ user }) => {
@@ -42,16 +40,6 @@ const Chatbox1 = ({ user }) => {
 				</div>
 			</div>
 			<div className='chatBox_body '></div>
-			<div className='chatBox_body_bottom'>
-				<InputEmoji
-					value=''
-					cleanOnEnter
-					placeholder='Please select a contact to start chat .....'
-				/>
-				<IconButton>
-					<KeyboardVoiceIcon />
-				</IconButton>
-			</div>
 		</div>
 	);
 };
