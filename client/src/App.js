@@ -61,7 +61,7 @@ const App = () => {
 				<div className='login-body'>
 					<GoogleLogin
 						className='google_login_btn'
-						clientId='752833155628-sm85intgmqbcc0dmrl22qcqsce5bthj2.apps.googleusercontent.com'
+						clientId='CLIENT_ID'
 						buttonText='Login with Google'
 						onSuccess={responseGoogle}
 						onFailure={responseFailureGoogle}
