@@ -4,7 +4,8 @@ import "./App.css";
 import Sidebar from "./Sidebar";
 import Chatbox from "./Chatbox";
 import Chatbox1 from "./Chatbox1";
-import axios from "./axios.js";
+// import axios from "./axios.js";
+import axios from "axios";
 import GoogleLogin from "react-google-login";
 
 const App = () => {
@@ -61,8 +62,8 @@ const App = () => {
 				<div className='login-body'>
 					<GoogleLogin
 						className='google_login_btn'
-						clientId='CLIENT_ID'
-						buttonText='Login with Google'
+						clientId='752833155628-sm85intgmqbcc0dmrl22qcqsce5bthj2.apps.googleusercontent.com'
+						buttonText='Google Login'
 						onSuccess={responseGoogle}
 						onFailure={responseFailureGoogle}
 						cookiePolicy={"single_host_origin"}

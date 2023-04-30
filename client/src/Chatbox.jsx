@@ -10,7 +10,7 @@ import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
 import LogoutIcon from "@mui/icons-material/Logout";
 import SendIcon from "@mui/icons-material/Send";
 
-import axios from "./axios.js";
+import axios from "axios";
 import { useParams } from "react-router-dom";
 import Pusher from "pusher-js";
 

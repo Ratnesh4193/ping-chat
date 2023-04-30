@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config(); //for accessing env variables
 
 const PORT = process.env.PORT || 8000;
-console.log(PORT);
+console.log("from axios.js" +PORT);
 const instance = axios.create({
 	baseURL: `http://localhost:${PORT}`,
 });

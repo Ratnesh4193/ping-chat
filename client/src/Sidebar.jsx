@@ -5,7 +5,9 @@ import { Avatar, IconButton } from "@mui/material";
 import DonutLargeIcon from "@mui/icons-material/DonutLarge";
 import ChatIcon from "@mui/icons-material/Chat";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import axios from "./axios.js";
+
+import axios from "axios";
+
 import SearchIcon from "@mui/icons-material/Search";
 import ContactAvatar from "./ContactAvatar";
 
