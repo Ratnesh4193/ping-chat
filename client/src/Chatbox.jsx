@@ -119,9 +119,8 @@ const Chatbox = ({ user }) => {
 				}
 			);
 			data.msg = decrypt_msg.data.msg;
-			console.log(data, curRoom);
 
-			if (data.roomId === curRoom._id) setMessages([...messages, data]);
+			if (data.roomId === curRoom) setMessages([...messages, data]);
 		});
 
 		return () => {
